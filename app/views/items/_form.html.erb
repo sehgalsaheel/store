@@ -1,0 +1,41 @@
+<%= simple_form_for @item, remote: true, html: { class: "form-horizontal"} do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+       <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+       <ul>
+          <% @item.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+       </ul>
+    </div>
+  <% end %>
+    <div class="field">
+       <%= f.label :name %><br>
+       <%= f.text_field :name %>
+    </div>
+    <div class="field">
+       <%= f.label :thumbnail %><br>
+       <%= f.text_field :thumbnail %>
+    </div>
+    <div class="field">
+       <%= f.label :price %><br>
+       <%= f.text_field :price %>
+    </div>
+    <div class="field">
+       <%= f.label :category %><br>
+       <%= f.select :category, options_for_select(@categories.collect {|s|
+          [s[0].humanize, s[0]]}, selected: @item.category), {} %>
+    </div>
+    <div class="field">
+       <%= f.label :vendor_id %><br>
+       <%= f.select :vendor_id, options_for_select(Vendor.all.collect {|i| ["#{i.name}", i.id]}, selected: (@item.vendor ? @item.vendor.id : Vendor.first.id)), {} %>
+    </div>
+    <div class="field">
+       <%= f.label :sort %><br>
+       <%=  f.select :sort, options_for_select(@sorts.collect {|s|
+          [s[0].humanize, s[0]]}, selected: @item.sort), {} %>
+    </div>
+    <div class="actions">
+      <%= f.submit :class => 'button' %>
+    </div>
+<% end %>

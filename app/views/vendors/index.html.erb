@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<%= link_to new_vendor_path, id: 'myModal', class: 'btn btn-success', :"data-toggle" => 'modal', :"data-target" => '#myModal', remote: true do%>
+ 
+</div>
+<i class="glyphicon glyphicon-plus"></i> New Vendor
+<% end %>
+
+<h1>Listing Vendors</h1>
+<br>
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th>Country</th>
+      <th colspan="2">Extra Feature</th>
+    </tr>
+  </thead>
+
+  <tbody id="vendors">
+    <%= render @vendors %>
+  </tbody>
+</table>
+</div>
+<br>
+

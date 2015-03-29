@@ -1,0 +1,9 @@
+      <tr>
+        <td><a class="btn btn-default" <%= link_to(vendor.name, vendor, remote: true) %> </a></td>
+        <td><%= vendor.email %></td>
+        <td><%= vendor.phone %></td>
+        <td><a class="btn btn-default"<%= link_to vendor.website, vendor.website %> </a> </td>
+        <td><%= vendor.country %></td>
+        <td><%= link_to 'Edit', edit_vendor_path(vendor), class: 'btn btn-primary btn-xs', remote: true%></td>
+        <td><%= link_to 'Destroy', vendor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs', remote: true %></td>
+      </tr>

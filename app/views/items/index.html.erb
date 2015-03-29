@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<%= link_to new_item_path, id: 'myModal', class: 'btn btn-success', :"data-toggle" => 'modal', :"data-target" => '#myModal', remote: true do%>
+ 
+</div>
+<i class="glyphicon glyphicon-plus"></i> New Item
+<% end %>
+<h1>Listing Items</h1>
+
+<br>
+
+
+<div class="table-responsive">
+  <div id="items_wrapper" class="dataTables_wrapper no-footer">
+    <%= render partial: 'index' %>
+  </div>
+</div>
+
+
+
+
