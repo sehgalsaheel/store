@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
   def index
     @search = Item.search(params[:q])
     @search.sorts = 'name asc' if @search.sorts.empty?
+    @items = @search.result
      if params[:q].present?
         params[:q].each do |k, v| 
       if v == 'name asc'
