@@ -11,5 +11,6 @@ class Item < ActiveRecord::Base
 
 	default_scope { order("lower(name) asc")}
 
+
 	belongs_to :vendor
 end

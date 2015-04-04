@@ -7,8 +7,16 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @search = Item.search(params[:q])
-    @search.sorts ||= "name.asc"
-    @items = @search.result
+    @search.sorts = 'name asc' if @search.sorts.empty?
+     if params[:q].present?
+        params[:q].each do |k, v| 
+      if v == 'name asc'
+        @items = @search.result.sort { |p1, p2| p1.name.downcase <=> p2.name.downcase }
+      elsif v == 'name desc'
+        @items = @search.result.sort { |p2, p1| p1.name.downcase <=> p2.name.downcase }
+      end
+    end
+  end
   end
 
   def all_items

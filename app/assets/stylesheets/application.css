@@ -27,7 +27,9 @@ body{
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-
+.lower{
+  text-transform: lowercase;
+}
 h4{
   font-weight: bold;
   color: black;
