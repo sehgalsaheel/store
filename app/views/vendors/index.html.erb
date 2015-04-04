@@ -9,11 +9,18 @@
 
 <h1>Listing Vendors</h1>
 <br>
+<%= search_form_for @search do |f| %>
+  <div class ="field">
+    <%= f.label :name_cont, "Name contains" %>
+    <%= f.text_field :name_cont %>
+  </div>
+  <div class="actions"><%= f.submit "Search" %> </div>
+<% end %>
 <div class="table-responsive">
-<table class="table">
+<table class="table" id="no-more-table">
   <thead>
     <tr>
-      <th>Name</th>
+      <th><%= sort_link @search, :name, "Name"  %></th>
       <th>Email</th>
       <th>Phone</th>
       <th>Website</th>

@@ -30,11 +30,6 @@
        <%= f.label :vendor_id %><br>
        <%= f.select :vendor_id, options_for_select(Vendor.all.collect {|i| ["#{i.name}", i.id]}, selected: (@item.vendor ? @item.vendor.id : Vendor.first.id)), {} %>
     </div>
-    <div class="field">
-       <%= f.label :sort %><br>
-       <%=  f.select :sort, options_for_select(@sorts.collect {|s|
-          [s[0].humanize, s[0]]}, selected: @item.sort), {} %>
-    </div>
     <div class="actions">
       <%= f.submit :class => 'button' %>
     </div>

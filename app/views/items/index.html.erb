@@ -8,12 +8,31 @@
 <h1>Listing Items</h1>
 
 <br>
-
+<%= search_form_for @search do |f| %>
+  <div class ="field">
+    <%= f.label :name_cont, "Name Contains:" %>
+    <%= f.text_field :name_cont %>
+  </div>
+  <div class="actions"><%= f.submit "Search" %> </div>
+<% end %>
 
 <div class="table-responsive">
-  <div id="items_wrapper" class="dataTables_wrapper no-footer">
-    <%= render partial: 'index' %>
-  </div>
+
+    <table class="table" id="no-more-tables">
+  <thead>
+    <tr>
+      <th> <%= sort_link @search, :name, "Name" %></th>
+      <th>Thumbnail</th>
+      <th><%= sort_link @search, :price, "Price"  %></th>
+      <th><%= sort_link @search, :category, "Category"  %></th>
+      <th><%= sort_link @search, :vendor_id, "Vendor" %></th>
+      <th colspan="2">Extra Feature</th>
+    </tr>
+  </thead>
+  <tbody id="items">
+      <%= render @items %>
+  </tbody>
+</table>
 </div>
 
 

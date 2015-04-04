@@ -9,18 +9,14 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 
 # Use CoffeeScript for .coffee assets and views
-
-
+gem "paperclip", "~> 4.2"
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 gem 'coffee-rails', '~> 4.1.0'
 
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
-
-
-
+gem 'ransack'
 gem 'rails_autolink', '~> 1.1.6'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

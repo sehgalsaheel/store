@@ -1,2 +1,4 @@
-$('#items').html("<%= j (render partial: 'index') %>");
+$('#items').html("<%= j (render @items) %>");
 $('#myModal').modal('hide');
+$('#current_item').css({'background-color' :
+'#3c54e7'}).animate({'background-color' : '#ffffff'}, 1000);

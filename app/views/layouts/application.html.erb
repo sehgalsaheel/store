@@ -7,19 +7,18 @@
       <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
       <%= csrf_meta_tags %>
    </head>
-   <body class="<%= controller.controller_name %>" >
-      <div class="outside">
+   <body >
+   <div class="container theme-showcase">
          <%= render 'shared/navigation' %>
-         <div class="container theme-showcase">
             <!-- Main jumbotron for a primary marketing message or call to action -->
-         <div class="jumbotron" id="logo">
+         <div class="bs-docs-header" id="logo">
             </div>
          </div>
+      </div>
          <div class="container theme-showcase" role="main">
             <div id="main">
                <%= yield %>
             </div>
          </div>
-      </div>
    </body>
 </html>

@@ -1,9 +1,10 @@
       <tr>
-        <td><a class="btn btn-default" <%= link_to(vendor.name, vendor, remote: true) %> </a></td>
-        <td><%= vendor.email %></td>
-        <td><%= vendor.phone %></td>
-        <td><a class="btn btn-default"<%= link_to vendor.website, vendor.website %> </a> </td>
-        <td><%= vendor.country %></td>
-        <td><%= link_to 'Edit', edit_vendor_path(vendor), class: 'btn btn-primary btn-xs', remote: true%></td>
-        <td><%= link_to 'Destroy', vendor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs', remote: true %></td>
+        <td data-title="Name"><a class="btn btn-default" <%= link_to(vendor.name, vendor, remote: true) %> </a></td>
+        <td data-title="Email"><%= vendor.email %></td>
+        <td data-title="Phone"><%= vendor.phone %></td>
+        <td data-title="Website"><a class="btn btn-default"<%= link_to vendor.website, vendor.website %> </a> </td>
+        <td data-title="Country"><%= vendor.country %></td>
+        <td data-title="Extra"><%= link_to edit_vendor_path(vendor),  class: 'btn btn-primary btn-xs', remote: true do%><i class="glyphicon glyphicon-edit"></i> Edit
+        <% end %></td>
+        <td data-title="Feature"><%= link_to vendor, method: :delete, data: { confirm: 'Are you sure?' },  class: 'btn btn-danger btn-xs', remote: true do%><i class="glyphicon glyphicon-remove-circle"></i> Destroy<% end %></td>
       </tr>

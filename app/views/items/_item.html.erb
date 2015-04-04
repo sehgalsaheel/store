@@ -1,12 +1,16 @@
-    
-    <tr>
-        <td><%= item.name.titleize %></td>
-        <td><%= item.thumbnail %></td>
-        <td><%= number_to_currency(item.price) %></td>
-        <td><%= item.category %></td>
-        <td><a class="btn btn-default" <%= link_to(item.vendor.try(:name) || "NA", item.vendor, remote: true) %> </a> </td>
-        <td><%= item.sort %></td>
-        <td><%= link_to 'Edit', edit_item_path(item),  class: 'btn btn-primary btn-xs', remote: true %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' },  class: 'btn btn-danger btn-xs', remote: true %></td>
+    <% if item == @current_item %>
+        <tr id="current_item">
+    <% else %>
+        <tr>
+    <% end %>
+        <td data-title="Name"><%= item.name.titleize %></td>
+        <td data-title="Thumbnail"><%= image_tag item.thumbnail %></td>
+        <td data-title="Price"><%= number_to_currency(item.price) %></td>
+        <td data-title="Category"><%= item.category %></td>
+        <td data-title="Vendor"><a class="btn btn-default" <%= link_to(item.vendor.try(:name) || "NA", item.vendor, remote: true) %> </a> </td>
+        <td data-title="Extra Feature"><%= link_to edit_item_path(item),  class: 'btn btn-primary btn-xs', remote: true do%><i class="glyphicon glyphicon-edit"></i> Edit
+        <% end %></td>
+        <td><%= link_to item, method: :delete, data: { confirm: 'Are you sure?' },  class: 'btn btn-danger btn-xs', remote: true do%><i class="glyphicon glyphicon-remove-circle"></i> Destroy<% end %></td>
     </tr>
+    
     

@@ -17,23 +17,145 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'http://fonts.googleapis.com/css?family=Montserrat:300,400,700';
 
 body{
 	background-image: url("planet.jpg");
   -webkit-filter: blur(80px);
   color: black;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h4{
   font-weight: bold;
   color: black;
 }
-#logo{
-  background-image: url("logo.jpg");
-  -webkit-border-radius: 0px 0px 5px 5px;
-  border-radius: 0px 0px 5px 5px;
-  height: 77%;
+.container, .theme-showcase{
+  width: 100%;
 }
+.bs-docs-header { 
+  margin: 0 auto 20px 0;
+  font-size:20px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+.bs-docs-header h1{margin-top:0;color:#fff}
+.bs-docs-header p{margin-bottom:0;font-weight:300;line-height:1.4}
+.bs-docs-header .container{position:relative}
+@media screen and (min-width:768px){
+  .bs-docs-header{
+    position: relative;
+    
+    font-size:24px;
+    text-align:left;
+  }
+.bs-docs-header h1{font-size:60px;line-height:1}}
+@media (min-width:992px){.bs-docs-header h1,
+  .bs-docs-header p{width:auto;margin-right:380px}}
+
+  .bs-docs-header,.bs-docs-masthead {    
+    background-image: url("logo.jpg");
+    -webkit-border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 5px 5px;
+    position: relative;
+    padding-bottom: 170px;
+    color: #cdbfe3;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+    background-color: #6f5499;
+    background-repeat: repeat-x;
+    background: cover;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    -webkit-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+   }
+
+@media only screen and (max-width: 800px) {
+  #no-more-tables {
+    font-size: 12px; 
+  } 
+  td{
+    font-size: 10px;
+  }
+  a{
+    font-size: 11px;
+  }
+  .btn-default{
+    font-size: 11px;
+  }
+  .btn-xs{
+    font-size: 11px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    /* Force table to not be like tables anymore */
+  #no-more-tables table, 
+  #no-more-tables thead, 
+  #no-more-tables tbody, 
+  #no-more-tables th, 
+  #no-more-tables td, 
+  #no-more-tables tr { 
+    display: block; 
+    font-size: 14px;
+  }
+        .btn-default{
+    font-size: 14px;
+  }
+ 
+  /* Hide table headers (but not display: none;, for accessibility) */
+  #no-more-tables thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #no-more-tables thead{
+        width: 10000%;
+    color: blue;
+  }
+ 
+  #no-more-tables tr { border: 1px solid #ccc; }
+ 
+  #no-more-tables td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+    white-space: normal;
+    text-align:left;
+  }
+ 
+  #no-more-tables td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    text-align:left;
+    font-weight: bold;
+  }
+ 
+  /*
+  Label the data
+  */
+  #no-more-tables td:before { content: attr(data-title); width: 10px; color:blue;}
+}
+
+
 .button{
   background-color: #4000FF;
   padding: 5px 10px 5px 10px;
@@ -44,6 +166,12 @@ h4{
 .btn-default:hover{
   background-color: #01A9DB;
 }
+.sort_link{
+  text-decoration: underline;
+}
+.sort_link:hover{
+  background-color: blue;
+}
 thead{
   background-color: #3c54e7;
 }
@@ -52,7 +180,6 @@ th{
   color: black;
 }
 h1{
-  font-family: Governor;
   font-weight: bold;
 }
 a:link{
@@ -61,10 +188,11 @@ a:link{
 a:visited{
   color:black;
 }
+/*
 select{
   width: 33%;
   height: 26px;
-}
+}*/
 #myModal{
   float: right;
   position: relative;
@@ -91,38 +219,47 @@ select{
   background-color: white;
   border-radius: 10px;
   padding: 10px 10px 20px 10px;
+  width: 100%;
+}
+.navbar-fixed-top{
+  height:50px;
 }
 .navbar-default {
-  width: 95%;
-  position:absolute;
-  left:2.5%;
+  width: 100%;
+  position:relative;
   background-color: #3c54e7;
-  border-color: #2b95c0;
+  border-color: #3c54e7;
   -webkit-border-radius: 5px 5px 0px 0px;
   border-radius: 5px 5px 0px 0px;
-  font-family: Governor;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  margin-bottom: 0px;
 }
 .navbar-default .navbar-brand {
   color: #ecf0f1;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #ffbbbc;
+  color: black;
 }
 .navbar-default .navbar-text {
   color: #ecf0f1;
 }
 .navbar-default .navbar-nav > li > a {
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   color: #ecf0f1;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #ffbbbc;
+  color: black;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #ffbbbc;
+  color: black;
   background-color: #2b95c0;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #ffbbbc;
+  color: black;
   background-color: #2b95c0;
 }
 .navbar-default .navbar-toggle {
@@ -138,6 +275,17 @@ select{
 .navbar-default .navbar-form {
   border-color: #ecf0f1;
 }
+
+.collapse {
+  color: #2b95c0;
+  border-color: #3c54e7;
+
+}
+.in{
+  background-color: #3c54e7;
+  border-color: #3c54e7;
+}
+
 .navbar-default .navbar-link {
   color: #ecf0f1;
 }
@@ -146,7 +294,7 @@ select{
 }
 
 @media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  .navbar-default .container .navbar-nav .open .dropdown-menu > li > a {
     color: #ecf0f1;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -338,4 +486,106 @@ animation-fill-mode: both;
 -moz-animation-name: shake;
 -o-animation-name: shake;
 animation-name: shake;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+      border-color: rgba(82,168,236,.8);
+    outline: 0;
+    outline: thin dotted \9;
+    -moz-box-shadow: 0 0 8px rgba(82,168,236,.6);
+    box-shadow: 0 0 8px rgba(82,168,236,.6) !important;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  #no-more-table {
+    font-size: 12px; 
+  } 
+  td{
+    font-size: 10px;
+  }
+  a{
+    font-size: 11px;
+  }
+  .btn-default{
+    font-size: 11px;
+  }
+  .btn-xs{
+    font-size: 11px;
+  }
+}
+
+
+@media only screen and (max-width: 750px) {
+    
+    /* Force table to not be like tables anymore */
+  #no-more-table table, 
+  #no-more-table thead, 
+  #no-more-table tbody, 
+  #no-more-table th, 
+  #no-more-table td, 
+  #no-more-table tr { 
+    display: block; 
+    font-size: 14px;
+  }
+        .btn-default{
+    font-size: 14px;
+  }
+ 
+  /* Hide table headers (but not display: none;, for accessibility) */
+  #no-more-table thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #no-more-table thead{
+        width: 10000%;
+    color: blue;
+  }
+ 
+  #no-more-table tr { border: 1px solid #ccc; }
+ 
+  #no-more-table td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+    white-space: normal;
+    text-align:left;
+  }
+ 
+  #no-more-table td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    text-align:left;
+    font-weight: bold;
+  }
+ 
+  /*
+  Label the data
+  */
+  #no-more-table td:before { content: attr(data-title); width: 10px; color:blue;}
 }

@@ -18,3 +18,4 @@
 //= require bootstrap-sprockets 
 //= require jquery.turbolinks
 //= require turbolinks
+//= require jquery-ui/effect-blind
