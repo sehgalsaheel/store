@@ -3,7 +3,7 @@
     <% else %>
         <tr>
     <% end %>
-        <td data-title="Name"><%= item.name.titleize %></td>
+        <td data-title="Name"><%= link_to(item.name.titleize, item, remote: true) %></td>
         <td data-title="Thumbnail"><%= image_tag item.thumbnail %></td>
         <td data-title="Price"><%= number_to_currency(item.price) %></td>
         <td data-title="Category"><%= item.category %></td>
