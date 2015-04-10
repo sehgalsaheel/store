@@ -11,13 +11,9 @@
  * file per style scope.
  *
  *= require_tree .
- *= require dataTables/jquery.dataTables
  *= require_self
   */
-
-@import "bootstrap-sprockets";
 @import "bootstrap";
-@import 'http://fonts.googleapis.com/css?family=Montserrat:300,400,700';
 
 body{
 	background-image: url("planet.jpg");

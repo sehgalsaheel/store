@@ -15,7 +15,6 @@ end
 # Use SCSS for stylesheets
 
 # Use CoffeeScript for .coffee assets and views
-gem "paperclip", "~> 4.2"
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 gem 'coffee-rails', '~> 4.1.0'
 
@@ -32,7 +31,6 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'responders'
 gem 'bootstrap-sass', '~> 3.2.0' 
-gem 'autoprefixer-rails' 
 gem 'simple_form'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
