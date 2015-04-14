@@ -12,10 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require dataTables/jquery.dataTables
-//= require turbolinks
 //= require_tree .
-//= require bootstrap-sprockets 
-//= require jquery.turbolinks
 //= require turbolinks
+//= require bootstrap-sprockets 
 //= require jquery-ui/effect-blind

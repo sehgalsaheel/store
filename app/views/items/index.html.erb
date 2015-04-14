@@ -1,7 +1,8 @@
 <% if notice.present? %>
 <p id="notice"><%= notice%></p>
 <% end %>
-<div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" >
+
 <%= link_to new_item_path, id: 'myModal', class: 'btn btn-success', :"data-toggle" => 'modal', :"data-target" => '#myModal', remote: true do%>
 
 </div>
