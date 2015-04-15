@@ -271,7 +271,7 @@ h4{
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
     
     /* Force table to not be like tables anymore */
   #no-more-tables table, 
@@ -355,6 +355,7 @@ th{
   color: black;
 }
 h1{
+  font-size: 30px;
   font-weight: bold;
 }
 a:link{
@@ -486,7 +487,10 @@ select{
   padding: 10px 10px 10px 10px;
 }
 .modal-open {
-overflow: hidden;
+overflow: scroll;
+}
+body.modal-open {
+    overflow: scroll;
 }
 /* add a scroll bar to stop page from jerking around */
 .modal-open.page-overflow .page-container,
@@ -497,7 +501,7 @@ overflow-y: scroll;
 }
 
 .modal-scrollable {
-position: fixed;
+position: absolute;
 top: 0;
 bottom: 0;
 left: 0;
@@ -607,10 +611,12 @@ overflow-y: visible;
     margin-top: -25px;
     margin-left: -250px;
     padding: 20px;
+    -webkit-overflow-scrolling: touch;
   }
   .modal-content{
   background-color: #01A9DB;
   padding: 5px 5px 5px 5px;
+  -webkit-overflow-scrolling: touch;
   }
 }
 @media (max-width: 385px) {
@@ -623,10 +629,12 @@ overflow-y: visible;
     margin-top: -25px;
     margin-left: -250px;
     padding: 20px;
+    -webkit-overflow-scrolling: touch;
   }
   .modal-content{
   background-color: #01A9DB;
   padding: 5px 5px 5px 5px;
+  -webkit-overflow-scrolling: touch;
   }
 }
 @media (max-width: 350px) {
@@ -639,10 +647,12 @@ overflow-y: visible;
     margin-top: -25px;
     margin-left: -250px;
     padding: 20px;
+    -webkit-overflow-scrolling: touch;
   }
   .modal-content{
   background-color: #01A9DB;
   padding: 5px 5px 5px 5px;
+  -webkit-overflow-scrolling: touch;
   }
 }
 @media (max-width: 935px) {
@@ -761,9 +771,6 @@ input[type="color"]:focus,
   #no-more-table td, 
   #no-more-table tr { 
     display: block; 
-    font-size: 14px;
-  }
-        .btn-default{
     font-size: 14px;
   }
  

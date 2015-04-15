@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
-  before_action :set_categories, :set_sorts
+  before_action :set_categories
   respond_to :html, :js
   before_action :all_items, only: [:index, :create, :destroy, :update]
   # GET /items
@@ -70,15 +70,12 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:name, :thumbnail, :price, :category, :sort)
+      params.require(:item).permit(:name, :price, :category)
     end
     def set_categories
       @categories = Item.categories
     end
-    def set_sorts
-      @sorts = Item.sorts
-    end
     def item_params
-        params.require(:item).permit(:name, :thumbnail, :price, :category, :sort, :vendor_id)
+        params.require(:item).permit(:name, :price, :category, :vendor_id)
     end   
 end
