@@ -5,7 +5,6 @@ class CreateItems < ActiveRecord::Migration
       t.string :thumbnail
       t.string :price
       t.integer :category, default: 1
-      t.integer :sort, default: 1
 
       t.timestamps null: false
     end
