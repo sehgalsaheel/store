@@ -4,7 +4,6 @@
         <tr>
     <% end %>
         <td data-title="Name"><%= item.name.titleize %></td>
-        <td data-title="Thumbnail"><%= image_tag item.thumbnail %></td>
         <td data-title="Price"><%= number_to_currency(item.price) %></td>
         <td data-title="Category"><%= item.category %></td>
         <td data-title="Vendor"><a class="btn btn-default" <%= link_to(item.vendor.try(:name) || "NA", item.vendor, remote: true) %> </a> </td>

@@ -21,6 +21,7 @@ body{
   font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-size: 14px;
 }
 .lower{
   text-transform: lowercase;
@@ -127,7 +128,7 @@ h4{
     margin-bottom: 20px;
    }
  }
-@media (min-width:930px){
+@media (min-width:900px){
   .bs-docs-header,.bs-docs-masthead {    
     background-image: url("logo.jpg");
     background-size: 100% auto;
@@ -388,6 +389,7 @@ select{
   height:50px;
 }
 .navbar-default {
+  font-size: 16px;
   width: 100%;
   position:relative;
   background-color: #3c54e7;
@@ -401,6 +403,7 @@ select{
 }
 .navbar-default .navbar-brand {
   color: #ecf0f1;
+  font-size: 18px;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: black;
@@ -413,6 +416,7 @@ select{
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #ecf0f1;
+  font-size: 14px;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: black;
@@ -564,6 +568,7 @@ overflow: auto;
 }
 .modal-dialog {
     position: absolute;
+    width: 400px;
     top: 5%;
     left: 25%;
 }
@@ -593,15 +598,67 @@ overflow-y: visible;
 }
 }
 @media (max-width: 480px) {
-  .modal{
-    width: 370px;
+  .modal-dialog{
+    width: 300px;
     height: 500px;
     position: absolute;
-    top: 70%;
-    left: 50%;
+    top: 12%;
+    left: 58%;
     margin-top: -25px;
     margin-left: -250px;
     padding: 20px;
+  }
+  .modal-content{
+  background-color: #01A9DB;
+  padding: 5px 5px 5px 5px;
+  }
+}
+@media (max-width: 385px) {
+  .modal-dialog{
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    top: 12%;
+    left: 56%;
+    margin-top: -25px;
+    margin-left: -250px;
+    padding: 20px;
+  }
+  .modal-content{
+  background-color: #01A9DB;
+  padding: 5px 5px 5px 5px;
+  }
+}
+@media (max-width: 350px) {
+  .modal-dialog{
+    width: 290px;
+    height: 500px;
+    position: absolute;
+    top: 10%;
+    left: 54%;
+    margin-top: -25px;
+    margin-left: -250px;
+    padding: 20px;
+  }
+  .modal-content{
+  background-color: #01A9DB;
+  padding: 5px 5px 5px 5px;
+  }
+}
+@media (max-width: 935px) {
+  .modal{
+    width: 820px;
+    height: 800px;
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    margin-top: -25px;
+    margin-left: -250px;
+    padding: 20px;
+  }
+  .modal-content{
+  background-color: #01A9DB;
+  padding: 10px 10px 10px 10px;
   }
 }
 .loading-spinner {
