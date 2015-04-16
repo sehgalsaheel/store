@@ -396,12 +396,15 @@ a:link{
 }
 a:visited{
   color:black;
+  text-decoration: underline;
 }
 a:hover{
   color:black !important;
   background-color: white;
 }
-
+.center{
+  text-align: center;
+}
 /*
 select{
   width: 33%;
