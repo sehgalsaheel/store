@@ -42,7 +42,33 @@ h4{
 }
 
 }
+.big{
+  font-size: 14px;
+}.bigger{
+  font-size: 20px;
+}
 
+.big:link{
+  color: blue;
+}
+.grey{
+  background-color: #8EA9B5;
+  border-bottom: solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: .5px 0 0 2px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+.col-10{
+  position: relative;
+  left: 5%;
+  right: 5%;
+  width: 85%;
+}
+p:link{
+  text-decoration: underline;
+}
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -358,11 +384,22 @@ h1{
   font-size: 30px;
   font-weight: bold;
 }
+h2{
+  font-size: 20px;
+}
+h3{
+  font-size: 18px;
+}
 a:link{
   color:black;
+  text-decoration: underline;
 }
 a:visited{
   color:black;
+}
+a:hover{
+  color:black !important;
+  background-color: white;
 }
 /*
 select{
@@ -419,8 +456,11 @@ select{
   color: #ecf0f1;
   font-size: 14px;
 }
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: black;
+
+.navbar-default .navbar-nav > li > a:link, a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: black !important;
+  text-decoration: none;
+
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: black;
