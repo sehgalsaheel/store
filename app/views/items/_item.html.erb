@@ -3,7 +3,12 @@
     <% else %>
         <tr>
     <% end %>
+<<<<<<< HEAD
         <td data-title="Name"><%= item.name.titleize %></td>
+=======
+        <td data-title="Name"><%= link_to(item.name.titleize, item, remote: true) %></td>
+        <td data-title="Thumbnail"><%= image_tag item.thumbnail %></td>
+>>>>>>> 43d33fd93abfe48b0c2bb984a8d5a46242bafa60
         <td data-title="Price"><%= number_to_currency(item.price) %></td>
         <td data-title="Category"><%= item.category %></td>
         <td data-title="Vendor"><a class="btn btn-default" <%= link_to(item.vendor.try(:name) || "NA", item.vendor, remote: true) %> </a> </td>

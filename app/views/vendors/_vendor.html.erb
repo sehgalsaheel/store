@@ -1,5 +1,5 @@
       <tr>
-        <td data-title="Name"><a class="btn btn-default" <%= link_to(vendor.name, vendor, remote: true) %> </a></td>
+        <td data-title="Name"><a class="btn btn-default" <%= link_to(vendor.name.titleize, vendor, remote: true) %> </a></td>
         <td data-title="Email"><%= vendor.email %></td>
         <td data-title="Phone"><%= vendor.phone %></td>
         <td data-title="Website"><a class="btn btn-default"<%= link_to vendor.website, vendor.website %> </a> </td>
