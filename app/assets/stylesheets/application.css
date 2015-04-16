@@ -21,7 +21,7 @@ body{
   font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-size: 18px;
+  font-size: 14px;
 }
 .lower{
   text-transform: lowercase;
@@ -366,10 +366,10 @@ th{
   color: black;
 }
 td{
-  font-size: 14px;
+  font-size: 12px;
 }
 .btn-xs{
-  font-size: 14px;
+  font-size: 12px;
 }
 h1{
   font-size: 30px;
